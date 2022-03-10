@@ -146,3 +146,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,windows,linux,dbeaver
+# Ignore junk I have in this folder
+*.docx
+*.sql
+*.pdf
