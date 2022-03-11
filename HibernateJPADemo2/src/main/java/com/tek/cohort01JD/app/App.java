@@ -66,12 +66,13 @@ public class App {
         dep.setTeacherList(teachlist);
         session.save(dep);
 
-        teachlist.clear();
-        teachlist.add(t5);
+        List<TeacherOtM> teachlist2 = new ArrayList<>();
+/*        teachlist.clear(); */
+        teachlist2.add(t5);
         session.save(t5);
         DepartmentOtM dep2 = new DepartmentOtM();
         dep2.setDeptname("Arts");
-        dep2.setTeacherList(teachlist);
+        dep2.setTeacherList(teachlist2);
         session.save(dep2);
         t.commit();
 
