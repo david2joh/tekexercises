@@ -7,6 +7,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 @Getter
 @Setter
@@ -48,7 +49,20 @@ public class Actor {
                 ", age=" + age +
                 '}';
     }
-//    public Set<Movie> getMovies() {
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Actor actor = (Actor) o;
+        return id.equals(actor.id) && firstName.equals(actor.firstName) && lastName.equals(actor.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName);
+    }
+    //    public Set<Movie> getMovies() {
 //        return movies;
 //    }
 //

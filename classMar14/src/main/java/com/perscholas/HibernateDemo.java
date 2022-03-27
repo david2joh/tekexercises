@@ -11,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
+import java.util.Map;
 
 
 public class HibernateDemo {
@@ -64,6 +65,14 @@ public class HibernateDemo {
         System.out.println(movieActor);
         System.out.println(movieActor.getActor());
         System.out.println(movieActor.getMovie());
+
+        System.out.println("trying to find movie by id");
+        List<MovieActor> ma1 = movieActorDao.findByMovieId(1);
+        System.out.println(ma1.toString());
+
+        System.out.println("trying to find movie by title");
+        List<Map<String,Object>> ma2 = movieActorDao.findByMovieTitle("Star Wars");
+                System.out.println(ma2.toString());
 
 
     }

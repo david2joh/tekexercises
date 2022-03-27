@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mar25example</title>
+
+     <script src="./jabascript.js">javascript.js</script>
+    <script>
+        let book  = {
+            name : "Lord of the Rings",
+            chapters: 15,
+            author: 'JRR Tolkien',
+            leadCharacter: "Bilbo Ba'ggins",
+            anotherCharacter: 'Samwise Gangee',
+            escapedCharater: 'Gol\'um',
+            adventure: function () {
+                return this.leadCharacter + this.anotherCharacter + "go on an adventure";
+            }
+            
+        }
+        console.log(book);
+        book.chapters = 12;
+        console.log(book);
+        console.log(book.adventure());
+
+        for (prop in book) {
+            console.log(prop + " = " + book[prop] );
+        }
+       let arr = [ 0 , 1 , 2, 3, 4, 5];
+       console.log("starting array = " + arr);
+       console.log("Slice 2nd element , 3rd element is excluded = " + arr.slice(2,3));
+       
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

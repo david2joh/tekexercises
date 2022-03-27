@@ -1,0 +1,45 @@
+body {
+    background-color: lime;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+ }
+
+.myLoginButton {
+    background-color: magenta;
+}
+.login-form {
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    width: fit-content;
+    padding: 5px;
+
+}
+
+.form-group {
+    color: teal;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.myLoginButton {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    height: 4ch;
+    text-align: center;
+    box-shadow: darkgray;
+}
+
+.forgotLogin {
+    text-shadow: 2px;
+    color: orange;
+}

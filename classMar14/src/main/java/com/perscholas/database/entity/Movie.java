@@ -7,6 +7,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Getter
@@ -53,6 +54,19 @@ public class Movie {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Movie movie = (Movie) o;
+        // this has to do with not null question in generation ... maybe try to fiddle with this
+        return id.equals(movie.id) && title.equals(movie.title) && Objects.equals(description, movie.description) && Objects.equals(releaseDate, movie.releaseDate) && Objects.equals(movieActors, movie.movieActors);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, description, releaseDate, movieActors);
+    }
 //    public Integer getId() {
 //        return id;
 //    }
