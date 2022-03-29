@@ -1,0 +1,12 @@
+.gradient-custom {
+   background: linear-gradient(to bottom right,
+   rgb(147, 235, 251),
+   rgb(120, 106, 245))
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}

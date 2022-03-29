@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hurricane&display=swap');
+
+.myContainer {
+    background-color: cornflowerblue;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/music-sheet-page-composition-beethoven-52365702.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.login-form {
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 50px 5px black;
+}
+
+.form-group {
+    color: teal;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.form-group {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',  sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+
+#myLoginButton {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    height: 4ch;
+    text-align: center;
+    box-shadow: darkgray;
+    background-color: gainsboro;
+    margin-top: 2rem;
+}
+
+#myLoginButton:hover {
+    background-color: limegreen;
+}
+
+.forgotLogin {
+    text-shadow: 2px;
+    color: orange;
+}
+
+#myDiv {
+    text-align: center; 
+    background-color: coral;
+    color: white;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;       
+    align-items: center;           
+    background-image: url('../img/music-cd0-small.png');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    position: relative;
+    bottom: 25px;
+}
+/*
+  h4 {
+      margin-bottom: 55px;
+      font-size: 30px;
+  }
+*/
+  #layover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;       
+      align-items: center;  
+      height: fit-content;
+      width: fit-content;
+  }
+
+  #layover>h4 {
+      padding-bottom: 2px; 
+   font-family: 'Hurricane', sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   font-size: 38px;
+  }
