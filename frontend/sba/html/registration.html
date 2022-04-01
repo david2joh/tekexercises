@@ -10,7 +10,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- local -->
     <link rel="stylesheet" href="../css/registration.css">
-    <!-- sba requirement -->
+    <!--  -->
+    <!-- sba requirement to have internal styling move to the css file once submitted-->
+    <!--  -->
+    <!-- Add some styling  to the image glommed to the top of the card -->
+    <!-- round the coners of the upper image slighty to blend to the page , set the image to cover the 
+    allocated space. -->
     <style>
       .card-img-top {
        height: 25vw;
@@ -22,18 +27,24 @@
        </style>
 </head>
 <body>
+  <!-- one section to rule them all . kludge in the view height to 200 to allow for the errors to show up -->
   <section class="vh-200 gradient-custom">
     <div class="container py-5 h-100">
+      <!-- Use the bootstrap semantics  each field is assigned a row, each row centered , 
+      max two items per row so each item in a row set to col-6 or col-12 -->
       <div class="row justify-content-center align-items-center h-100">
         <div class="col-12 col-lg-9 col-xl-7">
+          <!-- set a nice border shadow and round the edges of the card -->
           <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <!-- Set a nice image at the top -->
             <img src="../img/troy-music-hall-blog-video.jpeg" alt="Music Hall" class="w-100 card-img-top" alt="Music Hall">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration</h3>
-
+              <!-- Start my form .   Use the bootstrap sematics for form validation this gives the nice red
+              green outline on submit validation. Note this validates every field in the form for empty/not empty -->
               <form class="needs-validation" novalidate id="registerForm">
-                <!-- <form id="registerForm needs-validation" novalidate> -->
-                 <div class="row">
+                <!-- row #1 with first_name and last_name each place in 1/2 of the card with a bootstrtrap bottom margin (mb-4)-->
+                <div class="row">
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
                       <input type="text" id="firstName" class="form-control form-control-lg" required/>
@@ -54,7 +65,8 @@
                     </div>
                   </div>
                 </div>
-                
+            
+                <!-- row #2 with password and confirm password -->
                 <div class="row">
                   <div class="col-md-6 mb-2 pb-2">
                     <div class="form-outline">
@@ -74,21 +86,20 @@
                   </div>
                 </div>
 
+                <!-- row #3 with email  Input type email-->
                 <div class="row">
                   <div class="col-md-6 mb-2 pb-2">
                     <div class="form-outline" has-validation>
-                      <input type="text" id="email" class="form-control form-control-lg" required/>
+                      <input type="email" id="email" class="form-control form-control-lg" required/>
                       <label class="email" for="email">Email</label>
                       <div id="validationEmailFeedback" class="invalid-feedback">
                         Please choose a valid Email address
                       </div>
                     </div>
-                    
                   </div>
-                  
                 </div>
                 
-
+                <!-- row #4 . Radio button to control user type  Admin or User.  Use for DB GRANT -->
                 <div class="row">
                   <div class="col-md-12 mb-4">
                     <h6 class="mb-2 pb-1">User Type: </h6>
@@ -109,9 +120,9 @@
                     </div>
                   </div>
                 </div>
-  
-                
-  
+
+                <!-- row #5 .  Drop down menu for User music preference. -->
+                    <!-- This started life as a sba requirement  But I've come to like it -->
                 <div class="row">
                   <div class="col-12">
                     <select class="select form-control-md">
@@ -123,7 +134,9 @@
                     <label class="form-label select-label">Choose Primary Music Genre</label>
                   </div>
                 </div>
- 
+                
+                <!-- Row #6 the Submit button. Use bootstrap to make the button an outline with blue color  -->
+                <!-- This row is divided 3 3 6  : 3 for SUbmit button ; 3 blank space ; 6 Message to the user -->
                 <div class="row">
                  <div class="col-md-3 mt-4 pt-2">
                   <input class="btn btn-outline-primary btn-md" type="submit" value="Submit" />
@@ -133,6 +146,7 @@
                   <div class="col-md-6 mt-4 pt-2" id="message">Welcome to the Home CD catalog</div>
                 </div>
 
+                  <!-- DIV SOUP  -->
               </form>
             </div>
           </div>
